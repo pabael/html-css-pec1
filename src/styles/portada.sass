@@ -1,0 +1,53 @@
+@import 'colors'
+
+.portada-container
+  display: flex
+  flex-direction: column
+
+  .title h2
+    font-size: 1.5em
+    text-align: center
+
+  .timeline
+    margin-top: 30px
+    list-style-type: none
+    padding: 0
+    display: flex
+    flex-direction: column
+    position: relative
+
+    li
+      width:50%
+      margin: 0
+      padding: 0px 20px
+      box-sizing: border-box
+
+      &:nth-child(odd)
+        text-align: right
+        padding-left: 60px
+
+      &:nth-child(even)
+        text-align: left
+        align-self: end
+        padding-right: 60px
+
+  .vertical-line
+      width: 3px
+      height: 100%
+      background-color: var(--main-color)
+      position: absolute
+      left: 50%
+
+  @media (max-width: 767px)
+    .vertical-line
+      left: 0%
+
+    .timeline li
+      width:100%
+      margin: 0
+      padding: 0px 20px
+
+      &:nth-child(odd)
+        text-align: left
+        padding-left: 20px
+
